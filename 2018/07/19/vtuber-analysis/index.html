@@ -244,7 +244,7 @@
 
     
         <meta property="article:published_time" content="Thu Jul 19 2018 15:37:00 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 18 2019 11:35:04 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 18 2019 13:04:49 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@
     "mainEntityOfPage": "https://miraclexyz.github.io/2018/07/19/vtuber-analysis/index.html",
     "headline": "【分析】VTuber数据分析(1)",
     "datePublished": "Thu Jul 19 2018 15:37:00 GMT+0800",
-    "dateModified": "Thu Apr 18 2019 11:35:04 GMT+0800",
+    "dateModified": "Thu Apr 18 2019 13:04:49 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "MiracleXYZ",
@@ -369,17 +369,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/2018/07/19/vtuber-analysis/post-bg-vtuber-analysis.jpg)">
     
             <p class="article-headline-p">
                 【分析】VTuber数据分析(1)
@@ -494,7 +485,9 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="VTuber概述"><a href="#VTuber概述" class="headerlink" title="VTuber概述"></a>VTuber概述</h2><p>最近，Virtual YouTuber（简称VTuber）行业方兴未艾；从最初的Kizuna Ai（キズナアイ、絆愛）到现在超过3000人的规模，也不过两年的时间。而且，这一数字还将继续增长下去。</p>
+        <script type="text/javascript" src="https://echarts.baidu.com/dist/echarts.min.js"></script>
+
+<h2 id="VTuber概述"><a href="#VTuber概述" class="headerlink" title="VTuber概述"></a>VTuber概述</h2><p>最近，Virtual YouTuber（简称VTuber）行业方兴未艾；从最初的Kizuna Ai（キズナアイ、絆愛）到现在超过3000人的规模，也不过两年的时间。而且，这一数字还将继续增长下去。</p>
 <p>在这个时间节点上，我决定做一个相关的统计工作。</p>
 <ul>
 <li>数据来源：<a href="http://virtual-youtuber.userlocal.jp/" target="_blank" rel="noopener">バーチャルYouTuberランキング</a>（前2000名VTuber情报）</li>
@@ -502,17 +495,17 @@
 <li>采集时间：2018年7月17日 17:00:00</li>
 </ul>
 <h2 id="VTuber-TOP100"><a href="#VTuber-TOP100" class="headerlink" title="VTuber TOP100"></a>VTuber TOP100</h2><h3 id="粉丝数（YouTube频道订阅数）"><a href="#粉丝数（YouTube频道订阅数）" class="headerlink" title="粉丝数（YouTube频道订阅数）"></a>粉丝数（YouTube频道订阅数）</h3><p><div id="top100-fan" style="width:100%;height:550px;"></div></p>
-<script type="text/javascript" src="/js/in-post/vtuber-analysis/top100-fan.js"></script>
+<script type="text/javascript" src="/js/top100-fan.js"></script>
 
 <h3 id="播放数"><a href="#播放数" class="headerlink" title="播放数"></a>播放数</h3><p><div id="top100-play" style="width:100%;height:550px;"></div></p>
-<script type="text/javascript" src="/js/in-post/vtuber-analysis/top100-play.js"></script>
+<script type="text/javascript" src="/js/top100-play.js"></script>
 
 <h2 id="VTuber公司（事务所）TOP5"><a href="#VTuber公司（事务所）TOP5" class="headerlink" title="VTuber公司（事务所）TOP5"></a>VTuber公司（事务所）TOP5</h2><p>近几个月以来，VTuber界的形势又有所变化：多个YouTuber开始成立公司或者事务所，每个公司占据一定比例的市场份额。我们按照粉丝数和播放数对这些公司排序，使用前五名的数据得到下面的两张图表——可以看到一张市场大饼已初具雏形。</p>
 <h3 id="粉丝数TOP5的公司"><a href="#粉丝数TOP5的公司" class="headerlink" title="粉丝数TOP5的公司"></a>粉丝数TOP5的公司</h3><p><div id="company-fan" style="width:100%;height:550px;"></div></p>
-<script type="text/javascript" src="/js/in-post/vtuber-analysis/company-fan.js"></script>
+<script type="text/javascript" src="/js/company-fan.js"></script>
 
 <h3 id="播放数TOP5的公司"><a href="#播放数TOP5的公司" class="headerlink" title="播放数TOP5的公司"></a>播放数TOP5的公司</h3><p><div id="company-play" style="width:100%;height:550px;"></div></p>
-<script type="text/javascript" src="/js/in-post/vtuber-analysis/company-play.js"></script>
+<script type="text/javascript" src="/js/company-play.js"></script>
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>值得注意的是，这些图表只是在试图窥探这个庞大市场当中的一隅——VTuber事业仍然处于上升期，所以这些图表中的数据在将来可能会有不小的变化（比如在一年前谁会想到会有一群VTuber对着爱酱叫「親分」呢）；也希望这一产业能够继续发展，给人们带来更多的娱乐选择。</p>
 <p>欢迎在评论区留下你的见解。</p>
