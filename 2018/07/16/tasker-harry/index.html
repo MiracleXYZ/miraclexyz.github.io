@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Mon Jul 16 2018 15:08:00 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 18 2019 12:54:56 GMT+0800">
+        <meta property="article:modified_time" content="Fri Apr 19 2019 23:45:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://miraclexyz.github.io/2018/07/16/tasker-harry/index.html",
     "headline": "【Tasker折腾记#01】某HP手游的定时系统",
     "datePublished": "Mon Jul 16 2018 15:08:00 GMT+0800",
-    "dateModified": "Thu Apr 18 2019 12:54:56 GMT+0800",
+    "dateModified": "Fri Apr 19 2019 23:45:16 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "MiracleXYZ",
@@ -520,9 +520,9 @@
     
         <h2 id="引言（Demand-需求）"><a href="#引言（Demand-需求）" class="headerlink" title="引言（Demand 需求）"></a>引言（Demand 需求）</h2><p>最近出了一个哈利·波特系列的官方手游，叫做<em>Harry Potter: Hogwarts Mystery</em>（4月末英文版在iOS和Android平台上架，7月初推出中文版，具体介绍见<a href="https://www.taptap.com/app/71479/topic" target="_blank" rel="noopener">这里</a>）。</p>
 <p>不同于在其他平台发售的游戏，HP的手游是在哈利波特的时间线之前发生的一个独立的故事，虽然也是在霍格沃茨发生，也能碰到原著中的一些人物（比如比尔·韦斯莱）。（具体看上面链接中的简介吧）至于游戏操作嘛，就是不断地点点点，推动各种剧情，就像看一本小说一样……</p>
-<p><img src="/img/in-post/tasker-harry/game-1.png" alt="游戏过程"></p>
+<img src="/2018/07/16/tasker-harry/game-1.png" title="游戏过程">
 <p>基本上就是点有蓝边的角色，把上面带星星的条点满，这堂课或者这个任务就完成了，然后就会触发推动剧情的对话什么的。当然，可能有人已经看到右上角的小闪电了——这就是游戏（万恶）的<strong>能量系统</strong>，如果你耗尽了体力，就会变成这样——</p>
-<p><img src="/img/in-post/tasker-harry/game-2.png" alt="体力耗尽"></p>
+<img src="/2018/07/16/tasker-harry/game-2.png" title="体力耗尽">
 <blockquote>
 <p>每4分钟回复1点能量。不想等着？氪金！</p>
 </blockquote>
@@ -533,14 +533,14 @@
 <p>话不多说，我们开始！</p>
 <h2 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h2><p>安装Tasker后首先把所有权限（包括后台运行和锁屏不清理）全部打开（不然定时到一半卡住了哭都来不及），然后在设置页面把新手模式关掉（这样可以使用变量，不过这里没有用到啦），这些是前期的准备。</p>
 <p>然后，在「任务」这个tag新建一个叫<code>HarryPotter</code>的项目（当然用别的名字也可以），点击右面的「+」号添加任务——总共要添加以下四个任务，需要逐个添加：</p>
-<p><img src="/img/in-post/tasker-harry/tasker-1.png" alt="项目概览"></p>
+<img src="/2018/07/16/tasker-harry/tasker-1.png" title="项目概览">
 <h3 id="OpenHarry"><a href="#OpenHarry" class="headerlink" title="OpenHarry"></a><code>OpenHarry</code></h3><p><code>OpenHarry</code>用来启动游戏Harry Potter：</p>
-<p><img src="/img/in-post/tasker-harry/tasker-11.png" alt></p>
+<img src="/2018/07/16/tasker-harry/tasker-11.png">
 <p>（如果找不到对应的选项，可以在搜索框中输入「启动应用」这四个字）</p>
 <h3 id="CANCEL"><a href="#CANCEL" class="headerlink" title="CANCEL"></a><code>CANCEL</code></h3><p>这是用于后面的按钮页面的选项。由于Tasker不允许空任务的存在，因此我们设定，点击「CANCEL」按钮时，等待1毫秒的时间。</p>
-<p><img src="/img/in-post/tasker-harry/tasker-12.png" alt></p>
+<img src="/2018/07/16/tasker-harry/tasker-12.png">
 <h3 id="EnergyRefillDialog"><a href="#EnergyRefillDialog" class="headerlink" title="EnergyRefillDialog"></a><code>EnergyRefillDialog</code></h3><p>用于在能量充满时推出通知。</p>
-<p><img src="/img/in-post/tasker-harry/tasker-13.png" alt></p>
+<img src="/2018/07/16/tasker-harry/tasker-13.png">
 <p>第二项「通知」的设置如下：</p>
 <ul>
 <li>标题：<code>Harry Potter</code></li>
@@ -550,7 +550,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="TimeLimitNote"><a href="#TimeLimitNote" class="headerlink" title="TimeLimitNote"></a><code>TimeLimitNote</code></h3><p><img src="/img/in-post/tasker-harry/tasker-14.png" alt></p>
+<h3 id="TimeLimitNote"><a href="#TimeLimitNote" class="headerlink" title="TimeLimitNote"></a><code>TimeLimitNote</code></h3><img src="/2018/07/16/tasker-harry/tasker-14.png">
 <p>「通知」的设置与之前相同，只是文字改成<code>15 minutes to time limit!</code></p>
 <p>「弹出任务按钮」设置如下：</p>
 <ul>
@@ -560,13 +560,13 @@
 </ul>
 <p>这样我们的任务就搭建完了。另外我已经将任务项目导出到了<a href="https://github.com/MiracleXYZ/HarryTasker-for-HPHM" target="_blank" rel="noopener">GitHub</a>，有需要的可以自取导入。</p>
 <h2 id="设置桌面小部件"><a href="#设置桌面小部件" class="headerlink" title="设置桌面小部件"></a>设置桌面小部件</h2><p>要问安卓手机的优势，桌面小部件绝对是其中的一个。Tasker有一个叫做Task Timer的插件，可以在指定的倒计时之后执行特定的任务。我们添加四个这样的小部件，像这样：</p>
-<p><img src="/img/in-post/tasker-harry/Widgets.png" alt></p>
+<img src="/2018/07/16/tasker-harry/Widgets.png" title="游戏过程">
 <p>注意下面的两个分别是<strong>00:07:45:00</strong>和<strong>00:01:40:00</strong>（或者能量上限乘以4分钟）。这里因为我在做一个8小时的任务，所以后面两个（8小时的提醒+能量回复提醒）处于开启状态。</p>
 <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>前面我们已经看到了定时器启动的效果（点击小闹钟图标就可以启动了）。当能量回复之后，手机振动1秒，然后会有相应的通知推送：</p>
-<p><img src="/img/in-post/tasker-harry/EnergyRefilled.png" alt></p>
+<img src="/2018/07/16/tasker-harry/EnergyRefilled.png">
 <p>当时间只剩15分钟时，手机振动1秒，推送通知，并弹出选择框（原谅这上古时期的UI吧，我暂时还不知道怎么改）：</p>
-<p><img src="/img/in-post/tasker-harry/TimeLimit1.png" alt></p>
-<p><img src="/img/in-post/tasker-harry/TimeLimit2.png" alt></p>
+<img src="/2018/07/16/tasker-harry/TimeLimit1.png">
+<img src="/2018/07/16/tasker-harry/TimeLimit2.png">
 <p>在通知下方点击OPEN按钮，或者选择框中点击OpenHarry即可打开游戏。</p>
 <p>大功告成！</p>
 <h2 id="后记与发展方向"><a href="#后记与发展方向" class="headerlink" title="后记与发展方向"></a>后记与发展方向</h2><p>本来还想做一个退出游戏后就当即弹出选择框告知提醒时间的程序，但是考虑到退出游戏并不一定是因为能量耗尽，以及我的手机对「程序退出」的反应并不灵敏（这个是主因），我暂时放弃了这个想法，转到了半自动定时的方法上来。在配置好之后，退出游戏只需要划一下屏幕再点击几下，就可以触发自动化提醒的程序。</p>
