@@ -88,6 +88,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -246,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Sun Jul 15 2018 00:05:00 GMT+0800">
-        <meta property="article:modified_time" content="Thu Apr 18 2019 12:54:53 GMT+0800">
+        <meta property="article:modified_time" content="Fri Apr 19 2019 19:36:59 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -269,7 +274,7 @@
     "mainEntityOfPage": "https://miraclexyz.github.io/2018/07/15/network-pirated-movies/index.html",
     "headline": "【网站分析】分享看热门电影？",
     "datePublished": "Sun Jul 15 2018 00:05:00 GMT+0800",
-    "dateModified": "Thu Apr 18 2019 12:54:53 GMT+0800",
+    "dateModified": "Fri Apr 19 2019 19:36:59 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "MiracleXYZ",
@@ -537,7 +542,7 @@
 <img src="/2018/07/15/network-pirated-movies/redirect.png" title="redirect">
 <p>没错！他们跳转到了微信官方用于封停诱导分享链接的页面！前面假装自己是应版权方要求，后面用Chrome打开的时候玩一波「装死」，贵网站还真是把「贼喊捉贼」四个字应用到了极致。不过，看到链接是HTTP而非HTTPS，我们还有办法。</p>
 <p>用Fiddler抓包之后，找到了主页面，其中引用了一段js代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">share_tip</span>(<span class="params">share_app_times, share_timeline_times</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (share_timeline_times == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (shareATimes == <span class="number">1</span>) &#123;</span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 24px;color: #f5294c"&gt;分享成功&lt;/span&gt;&lt;/br&gt;请继续分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;2&lt;/span&gt;个不同的群即可观看！'</span>, <span class="string">'好'</span>)</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//dialog_alert_Mes('分 享成功，还需分 享&lt;span style="font-size: 30px;color: #f5294c"&gt;' + (3 - friend_num) + '&lt;/span&gt;个不同的群即可观看（同样的群无效）');</span></span><br><span class="line">		</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (shareATimes == <span class="number">2</span>) &#123;</span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 24px;color: #f5294c"&gt;分享失败！&lt;/span&gt;&lt;br&gt;注意：分享到相同的群会失败&lt;br&gt;请继续分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;2&lt;/span&gt;个不同的群！'</span>, <span class="string">'好'</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (shareATimes == <span class="number">3</span>) &#123;</span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 24px;color: #f5294c"&gt;分享成功&lt;/span&gt;&lt;/br&gt;请继续分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;1&lt;/span&gt;个不同的群即可观看！'</span>, <span class="string">'好'</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (share_timeline_times &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			$(<span class="string">"#share-wx-img"</span>).attr(<span class="string">'src'</span>,<span class="string">'index_files/q1.png'</span>); </span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 30px;color: #f5294c"&gt;分享成功！&lt;/span&gt;&lt;br/&gt;最后请分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;朋友圈&lt;/span&gt;即可!'</span>, <span class="string">'好'</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (shareATimes &lt;= <span class="number">3</span>) &#123;</span><br><span class="line">			dialog_alert_Mes(<span class="string">'应版权方宣传要求！发送到群即可观看全集！'</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">window</span>.location.href=<span class="string">"https://*****.****-*****.***/********/*****_********/*****.****"</span>; <span class="comment">//芬享完成后跳转的地址</span></span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//注：为保护版权，我们将盗版电影网址隐去</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">share_tip</span>(<span class="params">share_app_times, share_timeline_times</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (share_timeline_times == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (shareATimes == <span class="number">1</span>) &#123;</span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 24px;color: #f5294c"&gt;分享成功&lt;/span&gt;&lt;/br&gt;请继续分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;2&lt;/span&gt;个不同的群即可观看！'</span>, <span class="string">'好'</span>)</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//dialog_alert_Mes('分 享成功，还需分 享&lt;span style="font-size: 30px;color: #f5294c"&gt;' + (3 - friend_num) + '&lt;/span&gt;个不同的群即可观看（同样的群无效）');</span></span><br><span class="line">		</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (shareATimes == <span class="number">2</span>) &#123;</span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 24px;color: #f5294c"&gt;分享失败！&lt;/span&gt;&lt;br&gt;注意：分享到相同的群会失败&lt;br&gt;请继续分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;2&lt;/span&gt;个不同的群！'</span>, <span class="string">'好'</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (shareATimes == <span class="number">3</span>) &#123;</span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 24px;color: #f5294c"&gt;分享成功&lt;/span&gt;&lt;/br&gt;请继续分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;1&lt;/span&gt;个不同的群即可观看！'</span>, <span class="string">'好'</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (share_timeline_times &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			$(<span class="string">"#share-wx-img"</span>).attr(<span class="string">'src'</span>,<span class="string">'index_files/q1.png'</span>); </span><br><span class="line">		dialog_alert_Mes(<span class="string">'&lt;span style="font-size: 30px;color: #f5294c"&gt;分享成功！&lt;/span&gt;&lt;br/&gt;最后请分享到&lt;span style="font-size: 30px;color: #f5294c"&gt;朋友圈&lt;/span&gt;即可!'</span>, <span class="string">'好'</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (shareATimes &lt;= <span class="number">3</span>) &#123;</span><br><span class="line">			dialog_alert_Mes(<span class="string">'应版权方宣传要求！发送到群即可观看全集！'</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">window</span>.location.href=<span class="string">"https://*****.****-*****.***/********/*****_********/*****.****"</span>; <span class="comment">//芬享完成后跳转的地址</span></span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//注：为保护版权，我们将盗版电影网址隐去</span></span><br></pre></td></tr></table></figure>
 <p>程序逻辑如下：</p>
 <ol>
 <li>点击播放→弹出诱导分享界面；</li>
@@ -548,7 +553,7 @@
 <li>分享5次→跳转到枪版电影界面。</li>
 </ol>
 <p>让这个网站变现的途径是这段代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onhashchange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;jp();&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jp</span>(<span class="params"></span>) </span>&#123;location.href=<span class="string">"http://kigec.mxqnb.cn./"</span>;&#125;</span><br><span class="line">    		<span class="function"><span class="keyword">function</span> <span class="title">hh</span>(<span class="params"></span>) </span>&#123;history.pushState(history.length+<span class="number">1</span>, <span class="string">"message"</span>, <span class="built_in">window</span>.location.href.split(<span class="string">'#'</span>)[<span class="number">0</span>]+<span class="string">"#"</span>+<span class="keyword">new</span> <span class="built_in">Date</span>().getTime());&#125;</span><br><span class="line">		setTimeout(<span class="string">'hh();'</span>, <span class="number">200</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.onhashchange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;jp();&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jp</span>(<span class="params"></span>) </span>&#123;location.href=<span class="string">"http://kigec.mxqnb.cn./"</span>;&#125;</span><br><span class="line">    		<span class="function"><span class="keyword">function</span> <span class="title">hh</span>(<span class="params"></span>) </span>&#123;history.pushState(history.length+<span class="number">1</span>, <span class="string">"message"</span>, <span class="built_in">window</span>.location.href.split(<span class="string">'#'</span>)[<span class="number">0</span>]+<span class="string">"#"</span>+<span class="keyword">new</span> <span class="built_in">Date</span>().getTime());&#125;</span><br><span class="line">		setTimeout(<span class="string">'hh();'</span>, <span class="number">200</span>);</span><br></pre></td></tr></table></figure>
 <p>直接在你不注意的时候跳转到小广告的网址，赚取流量费。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>每当有热点，这些诱导分享的网站就会浮现出来，而且总会有很多人乐此不疲地进行分享。这些网站，要么以传播盗版为手段赚取访问量，要么直接跳转到无关网站空手套白狼，总之做的都是违法的事情。</p>
 <p>当然，随着人们警惕意识的提高，这类网站也变得狡猾了起来，开始以「版权方」名义要求用户分享，或者通过在浏览器中「装死」来逃避分析。当然，我们可以利用的方法还是比困难多的。</p>
@@ -764,7 +769,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -774,6 +779,26 @@
     
 
     <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">turned_in</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timer</i>
+                
+                时间轴
+            </a>
+        </li>
+        
     
 
     <!-- Article Number  -->
@@ -997,6 +1022,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -1007,6 +1038,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>
