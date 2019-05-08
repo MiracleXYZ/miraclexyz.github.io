@@ -528,14 +528,12 @@
         <p>Notion虽然提供了嵌入视频服务，但是只能嵌入YouTube等外国视频网站的视频。不过，我们可以用一些其他方法嵌入国内视频网站的视频。（理论上只要是个iframe就能搞进去，只是配置需要自己手动拖……）</p>
 <h1 id="以B站为例"><a href="#以B站为例" class="headerlink" title="以B站为例"></a>以B站为例</h1><ol>
 <li>首先找到视频，点击「分享」按钮，复制所有的嵌入代码： <img src="/2019/04/19/notion-video/bilibili-share.png" title="B站分享页面"></li>
-<li><p>点击下面文本框右边的「复制」按钮，然后在合适的地方粘贴，你会看到这段代码：</p>
- <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=19390801&amp;cid=31621681&amp;page=1"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>点击下面文本框右边的「复制」按钮，然后在合适的地方粘贴，你会看到这段代码：<pre><code class="html"> &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=19390801&amp;cid=31621681&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+</code></pre>
 </li>
-<li><p>把<code>src</code>里面的复制出来（不带引号），前面加上<code>https:</code>像这样：</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https://player.bilibili.com/player.html?aid=19390801&amp;cid=31621681&amp;page=1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Notion中新建一个embed（直接输入 <code>/embed</code> 即可），并复制这个地址：</p>
- <img src="/2019/04/19/notion-video/notion-embed.png" title="Notion的embed页面"></li>
+<li>把<code>src</code>里面的复制出来（不带引号），前面加上<code>https:</code>像这样：<pre><code> https://player.bilibili.com/player.html?aid=19390801&amp;cid=31621681&amp;page=1
+</code></pre></li>
+<li>在Notion中新建一个embed（直接输入 <code>/embed</code> 即可），并复制这个地址： <img src="/2019/04/19/notion-video/notion-embed.png" title="Notion的embed页面"></li>
 <li>对生成的页面进行适当拖动，看效果吧！</li>
 </ol>
 <hr>
@@ -701,7 +699,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
