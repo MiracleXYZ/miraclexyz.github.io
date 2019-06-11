@@ -14,7 +14,7 @@ thumbnail: "/2019/06/11/vtuber-collab-youtube/yousim_core.jpg"
 
 后来发现，YouTube Gaming也有类似的月费会员机制，因此可以把上篇文章中的算法在YouTube上再实现一遍。
 
-本篇文章使用了Mamedaifuku桑提供的数据，数据来源见http://mamedaifuku.sakura.ne.jp/live_stream/html/index.html，时间范围为2019年5月。
+本篇文章使用了Mamedaifuku桑提供的数据，数据来源见[这里](http://mamedaifuku.sakura.ne.jp/live_stream/html/index.html)，时间范围为2019年5月。
 
 话不多说，直接上图。
 
