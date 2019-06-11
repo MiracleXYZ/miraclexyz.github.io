@@ -29,6 +29,8 @@ thumbnail: "/2019/06/11/vtuber-collab-youtube/yousim_core.jpg"
 
 从图里可以看到，日本市场比国内市场参与者更多，聚集程度也更大。我们可以把图中的「核心区域」单独摘出来：
 
+{% asset_img yousim_core.jpg %}
+
 Hololive、Nijisanji、ANMR、HNST、Paryipro，各自旗下的VTuber几乎都是聚集在一起的。事实上，在一些VTuber的相似度排序中，可以非常清楚地看到这一点：
 
 {% asset_img aqua.jpg %}
